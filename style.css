@@ -816,7 +816,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
     max-width: calc(100% - 30px);
     height: 100vh;
     top: 0;
-    right: -400px;
+    right: 0;
+    margin-right: -390px;
     background-color: #fff;
     
     -webkit-transition: all 0.4s;
@@ -3522,3 +3523,45 @@ button:focus {outline: none;}
     height: 50%;
     object-fit: contain;
 } */
+
+.fa-bars {
+  color: white;
+}
+.fa-bars:hover {
+  color: #6c7ae0 !important;
+  transition: 0.5s !important;
+}
+
+.fa-cart-shopping {
+  color: white;
+}
+
+.fa-cart-shopping:hover {
+  color: #6c7ae0 !important;
+  transition: 0.5s !important;
+}
+
+
+#sideMenus {
+    height: 100%;
+    width: 390px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    margin-right: -390px;
+    transition: 0.5s;
+}
+#sideMenus ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+#sideMenus li {
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 17px;
+    display: block;
+}
