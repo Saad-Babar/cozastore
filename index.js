@@ -78,7 +78,7 @@ function filterProducts(category) {
 $(document).ready(function () {
     $(".tab").click(function () {
         $(".tab").removeClass("how-active1");
-        $(this).addClass("how-active1");
+        $(this).toggleClass("how-active1");
     });
 });
 
