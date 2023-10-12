@@ -1,0 +1,149 @@
+{
+    "products" : 
+    [
+        {
+            "id": "1",
+            "category_of": "women",
+            "image": "images/product-01.jpg",
+            "name" : "Esprit Ruffle Shirt",
+            "price" : "$16.64",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "2",
+            "category_of": "women",
+            "image": "images/product-02.jpg",
+            "name" : "Herschel supply",
+            "price" : "$35.31",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "3",
+            "category_of": "women",
+            "image": "images/product-04.jpg",
+            "name" : "Classic Trench Coat",
+            "price" : "$75.00",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "4",
+            "category_of": "women",
+            "image": "images/product-05.jpg",
+            "name" : "Front Pocket Jumper",
+            "price" : "$34.75",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "5",
+            "category_of": "women",
+            "image": "images/product-07.jpg",
+            "name" : "Shirt in Stretch Cotton",
+            "price" : "$52.66",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "6",
+            "category_of": "women",
+            "image": "images/product-08.jpg",
+            "name" : "Pieces Metallic Printed",
+            "price" : "$18.96",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "7",
+            "category_of": "women",
+            "image": "images/product-10.jpg",
+            "name" : "Femme T-Shirt In Stripe",
+            "price" : "$25.85",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "8",
+            "category_of": "women",
+            "image": "images/product-13.jpg",
+            "name" : "T-Shirt with Sleeve",
+            "price" : "$18.49",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "9",
+            "category_of": "women",
+            "image": "images/product-14.jpg",
+            "name" : "Pretty Little Thing",
+            "price" : "$54.79",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "10",
+            "category_of": "women",
+            "image": "images/product-16.jpg",
+            "name" : "Square Neck Back",
+            "price" : "$29.64",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "11",
+            "category_of": "men",
+            "image": "images/product-03.jpg",
+            "name" : "Only Check Trouser",
+            "price" : "$25.50",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "12",
+            "category_of": "men",
+            "image": "images/product-11.jpg",
+            "name" : "Herschel supply",
+            "price" : "$29.64",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "13",
+            "category_of": "belt",
+            "image": "images/product-12.jpg",
+            "name" : "Herschel supply",
+            "price" : "$63.15",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "14",
+            "category_of": "shoes",
+            "image": "images/product-09.jpg",
+            "name" : "Converse All Star Hi Plimsolls",
+            "price" : "$75.00",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "15",
+            "category_of": "watches",
+            "image": "images/product-06.jpg",
+            "name" : "Vintage Inspired Classic",
+            "price" : "$93.20",
+            "alt_tag": null,
+            "position": null
+        },
+        {
+            "id": "16",
+            "category_of": "watches",
+            "image": "images/product-15.jpg",
+            "name" : "Mini Silver Mesh Watch",
+            "price" : "$86.85",
+            "alt_tag": null,
+            "position": null
+        }
+    ]
+}
