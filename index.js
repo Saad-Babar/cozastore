@@ -73,93 +73,101 @@ function filterProducts(category) {
     });
 }
 
-// Change Color Of Active bUTTON 
-function alprodct() {
-    const deco = document.getElementById("alprod");
-    deco.classList.add('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.remove('how-active1');
-};
-function womn() {
-    const deco = document.getElementById("alprod");
-    deco.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.remove('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.add('how-active1');
-};
-function mn() {
-    const deco = document.getElementById("alprod");
-    deco.classList.remove('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.add('how-active1');
-};
-function blt() {
-    const deco = document.getElementById("alprod");
-    deco.classList.remove('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.add('how-active1');
+// Change Color Of Active bUTTON by jquerry
 
-};
-function shos() {
-    const deco = document.getElementById("alprod");
-    deco.classList.remove('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.add('how-active1');
+$(document).ready(function () {
+    $(".tab").click(function () {
+        $(".tab").removeClass("how-active1");
+        $(this).addClass("how-active1");
+    });
+});
 
-};
-function watch() {
-    const deco = document.getElementById("alprod");
-    deco.classList.remove('how-active1');
-    const deco2 = document.getElementById("womn");
-    deco2.classList.remove('how-active1');
-    const deco3 = document.getElementById("mn");
-    deco3.classList.remove('how-active1');
-    const deco4 = document.getElementById("blt");
-    deco4.classList.remove('how-active1');
-    const deco5 = document.getElementById("shos");
-    deco5.classList.remove('how-active1');
-    const deco6 = document.getElementById("watch");
-    deco6.classList.add('how-active1');
-};
+// function alprodct() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.add('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.remove('how-active1');
+// };
+// function womn() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.remove('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.add('how-active1');
+// };
+// function mn() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.remove('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.add('how-active1');
+// };
+// function blt() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.remove('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.add('how-active1');
+
+// };
+// function shos() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.remove('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.add('how-active1');
+
+// };
+// function watch() {
+//     const deco = document.getElementById("alprod");
+//     deco.classList.remove('how-active1');
+//     const deco2 = document.getElementById("womn");
+//     deco2.classList.remove('how-active1');
+//     const deco3 = document.getElementById("mn");
+//     deco3.classList.remove('how-active1');
+//     const deco4 = document.getElementById("blt");
+//     deco4.classList.remove('how-active1');
+//     const deco5 = document.getElementById("shos");
+//     deco5.classList.remove('how-active1');
+//     const deco6 = document.getElementById("watch");
+//     deco6.classList.add('how-active1');
+// };
 
 // Owl Carosel 
 $('.owl-carousel').owlCarousel({
