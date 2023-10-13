@@ -1,4 +1,19 @@
+// logout start 
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Add a click event listener to the logout button
+    document.getElementById('logout-button').addEventListener('click', function () {
+        // Remove the user token from localStorage
+        localStorage.removeItem('userToken');
+        // Redirect to the login page
+        window.location.href = 'login.html';
+    });
+});
+
+// Logout End 
+
 // Fetch and display data from json file
+
 function fetchData() {
     fetch('products_data.json')
         .then(response => response.json())
@@ -8,9 +23,11 @@ function fetchData() {
 }
 
 // fetch Data when the page loads
+
 window.onload = fetchData;
 
 // Function to add products to the page
+
 function addProductsToPage(data) {
     const productContainer = document.getElementById('product-container');
 
@@ -18,30 +35,30 @@ function addProductsToPage(data) {
         const productDiv = document.createElement('div');
         productDiv.className = `col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${product.category_of}`;
         productDiv.innerHTML = `
-            <div class="block2">
-                <div class="block2-pic hov-img0">
-                    <a href="#"><img src="${product.image}" alt="IMG-PRODUCT"></a>
-                    <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                        Quick View
-                    </a>
-                </div>
-                <div class="block2-txt flex-w flex-t p-t-14">
-                    <div class="block2-txt-child1 flex-col-l">
-                        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                            ${product.name}
-                        </a>
-                        <span class="stext-105 cl3">
-                            ${product.price}
-                        </span>
-                    </div>
-                    <div class="block2-txt-child2 flex-r p-t-3">
-                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                            <img class="icon-heart1 dis-block trans-04" src="images/icon-heart-01.png" alt="ICON">
-                            <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icon-heart-02.png" alt="ICON">
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="block2">
+        <div class="block2-pic hov-img0">
+        <a href="#"><img src="${product.image}" alt="IMG-PRODUCT"></a>
+        <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+        Quick View
+        </a>
+        </div>
+        <div class="block2-txt flex-w flex-t p-t-14">
+        <div class="block2-txt-child1 flex-col-l">
+        <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+        ${product.name}
+        </a>
+        <span class="stext-105 cl3">
+        ${product.price}
+        </span>
+        </div>
+        <div class="block2-txt-child2 flex-r p-t-3">
+        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+        <img class="icon-heart1 dis-block trans-04" src="images/icon-heart-01.png" alt="ICON">
+        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icon-heart-02.png" alt="ICON">
+        </a>
+        </div>
+        </div>
+        </div>
         `;
 
         // Add an event listener to each product for the click event
@@ -55,6 +72,7 @@ function addProductsToPage(data) {
 }
 
 // Add event listeners to the buttons for filter the datA
+
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-tope-group button');
 
@@ -67,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Function to filter products based on the selected category
+
 function filterProducts(category) {
     const products = document.querySelectorAll('.isotope-item');
 
@@ -82,9 +101,6 @@ function filterProducts(category) {
 
 // product details 
 
-
-
-
 // Change Color Of Active bUTTON by jquerry
 
 $(document).ready(function () {
@@ -95,6 +111,7 @@ $(document).ready(function () {
 });
 
 // Ollu Carosel 
+
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -120,6 +137,7 @@ $('.owl-carousel').owlCarousel({
 });
 
 // Side Bar Code 
+
 function openmenu() {
     document.getElementById('mySidebar').style.marginRight = '0px';
     document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';

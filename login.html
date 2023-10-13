@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/22b137e1dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="content-main" style="margin-top: 80px;">
+        <div class="container">
+            <div class="card mx-auto card-login col-md-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Sign in</h4>
+                    <form>
+                        <div class="mb-3">
+                            <input class="form-control" placeholder="Username or email" type="text" id="usname">
+                        </div>
+                        <!-- form-group// -->
+                        <div class="mb-3">
+                            <input class="form-control" placeholder="Password" type="password" id="pswd">
+                        </div>
+                        <!-- form-group// -->
+                        <div class="mb-3">
+                            <a href="#" class="float-end font-sm text-muted">Forgot password?</a>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check-input" checked="">
+                                <span class="form-check-label">Remember</span>
+                            </label>
+                        </div>
+                        <!-- form-group form-check .// -->
+                        <div class="mb-4">
+                            <button type="submit" class="btn btn-primary w-100" id="login-button">Login</button>
+                        </div>
+                        <!-- form-group// -->
+                    </form>
+                    <p class="text-center mb-4">Don't have account? <a href="#">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is already logged in
+            const userToken = localStorage.getItem('userToken');
+            if (userToken) {
+                window.location.href = 'index.html';
+            }
+
+            // Add a click event listener to the login button
+            document.getElementById('login-button').addEventListener('click', function () {
+                const username = document.getElementById('usname').value;
+                const password = document.getElementById('pswd').value;
+
+                // Replace this with your actual authentication logic (e.g., check against hard-coded values)
+                if (username === 'saad' && password === 'saad') {
+                    localStorage.setItem('userToken', 'your-secret-token'); // Store a token indicating authentication
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Invalid username or password. Please try again.');
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

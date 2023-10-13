@@ -54,9 +54,15 @@
                             <li>
                                 <a href="contact.html">Contact</a>
                             </li>
+                            <li>
+
+                            </li>
                         </ul>
                     </div>
                     <div class="wrap-icon-header flex-w flex-r-m h-full">
+                        <div class="flex-c-m h-full p-lr-19 menu">
+                            <button class="btn btn-outline-danger float-end" id="logout-button">Logout</button>
+                        </div>
                         <div class="flex-c-m h-full p-lr-19 menu">
                             <span><i class="fa-solid fa-cart-shopping fa-xl" onmouseover="openmenus()"></i></span>
                         </div>
@@ -668,6 +674,15 @@
     </div>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user is logged in
+            const userToken = localStorage.getItem('userToken');
+            if (!userToken) {
+                window.location.href = 'login.html'; // Redirect to the login page if not authenticated
+            }
+        });
+    </script>
     <script>
         // <!-- Add an event listener to each product for the click event -->
         productContainer.appendChild(productDiv);
