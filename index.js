@@ -94,7 +94,7 @@ $(document).ready(function () {
     });
 });
 
-// Owl Carosel 
+// Ollu Carosel 
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
