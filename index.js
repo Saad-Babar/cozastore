@@ -20,7 +20,7 @@ function addProductsToPage(data) {
         productDiv.innerHTML = `
             <div class="block2">
                 <div class="block2-pic hov-img0">
-                    <img src="${product.image}" alt="IMG-PRODUCT">
+                    <a href="#"><img src="${product.image}" alt="IMG-PRODUCT"></a>
                     <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                         Quick View
                     </a>
@@ -43,6 +43,13 @@ function addProductsToPage(data) {
                 </div>
             </div>
         `;
+
+        // Add an event listener to each product for the click event
+        productDiv.addEventListener('click', function () {
+            // Redirect to the product detail page with the product ID in the URL
+            window.location.href = `product-detail.html?id=${product.id}`;
+        });
+
         productContainer.appendChild(productDiv);
     });
 }
@@ -72,6 +79,11 @@ function filterProducts(category) {
         }
     });
 }
+
+// product details 
+
+
+
 
 // Change Color Of Active bUTTON by jquerry
 
