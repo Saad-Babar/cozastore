@@ -26,13 +26,14 @@
             <div class="card mx-auto card-login col-md-4">
                 <div class="card-body">
                     <h4 class="card-title mb-4">Sign in</h4>
-                    <form>
+                    <form id="login_form">
                         <div class="mb-3">
-                            <input class="form-control" placeholder="Username or email" type="text" id="usname">
+                            <input class="form-control" placeholder="Username or email" type="text" value="saad3"
+                                id="usname">
                         </div>
                         <!-- form-group// -->
                         <div class="mb-3">
-                            <input class="form-control" placeholder="Password" type="password" id="pswd">
+                            <input class="form-control" placeholder="Password" type="password" id="pswd" value="1233">
                         </div>
                         <!-- form-group// -->
                         <div class="mb-3">
@@ -48,33 +49,119 @@
                         </div>
                         <!-- form-group// -->
                     </form>
-                    <p class="text-center mb-4">Don't have account? <a href="#">Sign up</a></p>
+                    <p class="text-center mb-4">Don't have account? <a href="signup.html">Sign up</a></p>
                 </div>
             </div>
         </div>
     </section>
+
+    <button class="getUsers btn btn-primary">Check users</button>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Check if the user is already logged in
-            const userToken = localStorage.getItem('userToken');
-            if (userToken) {
-                window.location.href = 'index.html';
-            }
 
-            // Add a click event listener to the login button
-            document.getElementById('login-button').addEventListener('click', function () {
-                const username = document.getElementById('usname').value;
-                const password = document.getElementById('pswd').value;
+        const form = document.getElementById("login_form");
 
-                // Replace this with your actual authentication logic (e.g., check against hard-coded values)
-                if (username === 'saad' && password === 'saad') {
-                    localStorage.setItem('userToken', 'your-secret-token'); // Store a token indicating authentication
-                    window.location.href = 'index.html';
-                } else {
-                    alert('Invalid username or password. Please try again.');
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('usname').value;
+            const password = document.getElementById('pswd').value;
+
+            $.ajax({
+                url: "http://localhost:3000/users",
+                success: function (users) {
+                    const user = users.find((user) => user.name === username);
+                    if (user) {
+                        if (username === user.name && password === user.password) {
+                            localStorage.setItem('userToken', 'your-secret-token');
+                            // window.location.href = 'index.html';
+                            // console.log('you are logged in');
+                            alert('you are logged in');
+
+                        } else {
+                            alert('Invalid username or password. Please try again.');
+                        }
+
+                    } else {
+                        console.log('user not found');
+                    }
+                },
+                error: function (err) {
+                    console.log('route not found', err)
                 }
             });
-        });
+
+        })
+
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     // Check if the user is already logged in
+        //     const userToken = localStorage.getItem('userToken');
+        //     if (userToken) {
+        //         window.location.href = 'index.html';
+        //     }
+
+        //     // Add a click event listener to the login button
+        //     document.getElementById('login-button').addEventListener('click', function () {
+        //         const username = document.getElementById('usname').value;
+        //         const password = document.getElementById('pswd').value;
+
+
+        //
+
+        //         // Replace this with your actual authentication logic (e.g., check against hard-coded values)
+        //         // if (username === 'saad' && password === 'saad') {
+        //         //     localStorage.setItem('userToken', 'your-secret-token'); // Store a token indicating authentication
+        //         //     window.location.href = 'index.html';
+        //         // } else {
+        //         //     alert('Invalid username or password. Please try again.');
+        //         // }
+        //     });
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $('.getUsers').click(function (e) {
+
+        //     $.post('http://localhost:3000/users', JSON.stringify({id:1, name: "sheraz", password: '112233' }), function (responseData) {
+        //         console.log('POST request successful:', responseData);
+        //     }).fail(function (xhr, textStatus, errorThrown) {
+        //         console.error('Error:', errorThrown);
+        //     });
+
+        //     // $.ajax({
+        //     //     url: "http://localhost:3000/users",
+        //     //     success: function (users) {
+        //     //         // console.table(users);
+        //     //         for (const user of users) {
+        //     //             if (user.name === 'saad3') {
+        //     //                 console.log(user);
+        //     //             }
+        //     //         }
+        //     //     },
+        //     //     error: function (err) {
+        //     //         console.log('route not found', err)
+        //     //     }
+
+        //     // });
+        // });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
