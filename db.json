@@ -1,39 +1,9 @@
 {
   "users": [
     {
-      "username": "g",
-      "password": "h",
+      "name": "admin",
+      "password": "1234",
       "id": 1
-    },
-    {
-      "username": "jj",
-      "password": "jj",
-      "id": 2
-    },
-    {
-      "username": "jj",
-      "password": "kjr",
-      "id": 3
-    },
-    {
-      "username": "saad3",
-      "password": "1233",
-      "id": 4
-    },
-    {
-      "username": "saad3",
-      "password": "12334",
-      "id": 5
-    },
-    {
-      "username": "m",
-      "password": "mjk",
-      "id": 6
-    },
-    {
-      "username": "j",
-      "password": "n",
-      "id": 7
     }
   ]
 }
