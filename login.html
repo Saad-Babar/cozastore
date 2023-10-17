@@ -28,20 +28,15 @@
                     <h4 class="card-title mb-4">Sign in</h4>
                     <form id="login_form">
                         <div class="mb-3">
-                            <input class="form-control" placeholder="Username or email" type="text" value="saad3"
-                                id="usname">
+                            <input class="form-control" placeholder="Username or email" type="text" id="usname">
                         </div>
                         <!-- form-group// -->
                         <div class="mb-3">
-                            <input class="form-control" placeholder="Password" type="password" id="pswd" value="1233">
+                            <input class="form-control" placeholder="Password" type="password" id="pswd">
                         </div>
                         <!-- form-group// -->
                         <div class="mb-3">
                             <a href="#" class="float-end font-sm text-muted">Forgot password?</a>
-                            <label class="form-check">
-                                <input type="checkbox" class="form-check-input" checked="">
-                                <span class="form-check-label">Remember</span>
-                            </label>
                         </div>
                         <!-- form-group form-check .// -->
                         <div class="mb-4">
@@ -55,7 +50,7 @@
         </div>
     </section>
 
-    <button class="getUsers btn btn-primary">Check users</button>
+    <!-- <button class="getUsers btn btn-primary">Check users</button> -->
     <script>
 
         const form = document.getElementById("login_form");
@@ -73,9 +68,9 @@
                     if (user) {
                         if (username === user.name && password === user.password) {
                             localStorage.setItem('userToken', 'your-secret-token');
-                            // window.location.href = 'index.html';
+                            window.location.href = 'index.html';
                             // console.log('you are logged in');
-                            alert('you are logged in');
+                            // alert('you are logged in');
 
                         } else {
                             alert('Invalid username or password. Please try again.');
@@ -117,26 +112,6 @@
         //         // }
         //     });
         // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // $('.getUsers').click(function (e) {
 
