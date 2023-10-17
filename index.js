@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function fetchData() {
     fetch('products_data.json')
-        .then(response => response.json())
-        .then(data => {
-            addProductsToPage(data);
-        })
+    .then(response => response.json())
+    .then(data => {
+        addProductsToPage(data);
+    })
 }
 
 // fetch Data when the page loads
@@ -30,7 +30,7 @@ window.onload = fetchData;
 
 function addProductsToPage(data) {
     const productContainer = document.getElementById('product-container');
-
+    
     data.products.forEach(product => {
         const productDiv = document.createElement('div');
         productDiv.className = `col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${product.category_of}`;
@@ -60,13 +60,13 @@ function addProductsToPage(data) {
         </div>
         </div>
         `;
-
+        
         // Add an event listener to each product for the click event
         productDiv.addEventListener('click', function () {
             // Redirect to the product detail page with the product ID in the URL
             window.location.href = `product-detail.html?id=${product.id}`;
         });
-
+        
         productContainer.appendChild(productDiv);
     });
 }
@@ -75,7 +75,7 @@ function addProductsToPage(data) {
 
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-tope-group button');
-
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             const category = event.target.getAttribute('data-filter');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function filterProducts(category) {
     const products = document.querySelectorAll('.isotope-item');
-
+    
     products.forEach(product => {
         const productCategory = product.classList.contains(category) ? category : 'all';
         if (productCategory === category) {
