@@ -1,36 +1,25 @@
 // logout start 
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Add a click event listener to the logout button
     document.getElementById('logout-button').addEventListener('click', function () {
-        // Remove the user token from localStorage
         localStorage.removeItem('userToken');
-        // Redirect to the login page
         window.location.href = 'login.html';
     });
 });
-
 // Logout End 
 
 // Fetch and display data from json file
-
 function fetchData() {
     fetch('products_data.json')
-    .then(response => response.json())
-    .then(data => {
-        addProductsToPage(data);
-    })
+        .then(response => response.json())
+        .then(data => {
+            addProductsToPage(data);
+        })
 }
-
-// fetch Data when the page loads
-
 window.onload = fetchData;
-
 // Function to add products to the page
-
 function addProductsToPage(data) {
     const productContainer = document.getElementById('product-container');
-    
+
     data.products.forEach(product => {
         const productDiv = document.createElement('div');
         productDiv.className = `col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${product.category_of}`;
@@ -48,7 +37,7 @@ function addProductsToPage(data) {
         ${product.name}
         </a>
         <span class="stext-105 cl3">
-        ${product.price}
+        $${product.price}
         </span>
         </div>
         <div class="block2-txt-child2 flex-r p-t-3">
@@ -60,22 +49,15 @@ function addProductsToPage(data) {
         </div>
         </div>
         `;
-        
-        // Add an event listener to each product for the click event
+
         productDiv.addEventListener('click', function () {
-            // Redirect to the product detail page with the product ID in the URL
             window.location.href = `product-detail.html?id=${product.id}`;
         });
-        
         productContainer.appendChild(productDiv);
     });
 }
-
-// Add event listeners to the buttons for filter the datA
-
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-tope-group button');
-    
     filterButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             const category = event.target.getAttribute('data-filter');
@@ -83,12 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-// Function to filter products based on the selected category
-
 function filterProducts(category) {
     const products = document.querySelectorAll('.isotope-item');
-    
+
     products.forEach(product => {
         const productCategory = product.classList.contains(category) ? category : 'all';
         if (productCategory === category) {
@@ -98,20 +77,16 @@ function filterProducts(category) {
         }
     });
 }
-
 // product details 
 
 // Change Color Of Active bUTTON by jquerry
-
 $(document).ready(function () {
     $(".tab").click(function () {
         $(".tab").removeClass("how-active1");
         $(this).toggleClass("how-active1");
     });
 });
-
 // Ollu Carosel 
-
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -135,34 +110,27 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-
 // Side Bar Code 
-
 function openmenu() {
     document.getElementById('mySidebar').style.marginRight = '0px';
     document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
 }
-
 function closemenu() {
     document.getElementById('mySidebar').style.marginRight = '-390px';
     // document.getElementById('main').style.marginRight = '0';
     document.body.style.backgroundColor = '#fff';
 }
-
 function openmenus() {
     document.getElementById('mySidebars').style.marginRight = '0';
     // document.getElementById('sideMenu').style.marginRight = '-250px';
     // document.getElementById('main').style.marginRight = '250px';
     document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
 }
-
 function closemenus() {
     document.getElementById('mySidebars').style.marginRight = '-400px';
     // document.getElementById('main').style.marginRight = '0';
     document.body.style.backgroundColor = '#fff';
 }
-
-
 // $(document).ready(function() {
 
 //     $("#alprod").click(function() {

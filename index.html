@@ -64,7 +64,17 @@
                             <button class="btn btn-outline-danger float-end" id="logout-button">Logout</button>
                         </div>
                         <div class="flex-c-m h-full p-lr-19 menu">
-                            <span><i class="fa-solid fa-cart-shopping fa-xl" onmouseover="openmenus()"></i></span>
+                            <span id="cart-item-count" style="
+                            position: absolute;
+                            top: 1px;
+                            /* right: -10px; */
+                            background-color: #F74877;
+                            color: white;
+                            border-radius: 50%;
+                            padding: 1px 7px;
+                            font-size: 12px;">0</span>
+                            <span><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl" style="position: relative;
+                                display: inline-block;"></i></a></span>
                         </div>
                         <div class="flex-c-m h-full p-lr-19 menu">
                             <span><i class="fa-solid fa-bars expandBars fa-xl" onmouseover="openmenu()"></i></span>
@@ -673,24 +683,40 @@
         </div>
     </div>
 
-
+    <script>
+        // badge start
+        let itemCount = 0;
+        function updateCartIcon(count) {
+            const cartItemCountElement = document.getElementById('cart-item-count');
+            cartItemCountElement.textContent = count;
+        }
+        function fetchCartItemsAndUpdateCount() {
+            fetch('http://localhost:3000/cart_items')
+                .then(response => response.json())
+                .then(data => {
+                    itemCount = data.length;
+                    updateCartIcon(itemCount);
+                })
+                .catch(error => {
+                    console.error('Error fetching cart items:', error);
+                });
+        }
+        fetchCartItemsAndUpdateCount();
+        // badge end 
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Check if the user is logged in
             const userToken = localStorage.getItem('userToken');
             if (!userToken) {
-                window.location.href = 'login.html'; // Redirect to the login page if not authenticated
+                window.location.href = 'login.html';
             }
         });
     </script>
     <script>
-        // <!-- Add an event listener to each product for the click event -->
         productContainer.appendChild(productDiv);
         productDiv.addEventListener('click', function () {
-            // Redirect to the product detail page with the product ID in the URL
             window.location.href = `product-detail.html?id=${product.id}`;
         });
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
