@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('logout-button').addEventListener('click', function () {
         localStorage.removeItem('userToken');
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
     });
 });
 // Logout End 

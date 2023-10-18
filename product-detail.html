@@ -301,7 +301,24 @@
                 })
         }
         function addToCart(name, image, price, description, quantity) {
-            const product = { name, image, price, description, quantity };
+            fetch('http://localhost:3000/cart_items')
+                .then(response => response.json())
+                .then(cartItems => {
+                    const existingProduct = cartItems.find(item => item.name === name);
+                    if (existingProduct) {
+                        existingProduct.quantity = parseInt(existingProduct.quantity) + 1;
+                        updateCartItem(existingProduct);
+                    } else {
+                        const product = { name, image, price, description, quantity };
+                        addCartItem(product);
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+        function addCartItem(product) {
             fetch('http://localhost:3000/cart_items', {
                 method: 'POST',
                 headers: {
@@ -312,6 +329,23 @@
                 .then(response => response.json())
                 .then(data => {
                     alert(`"${data.name}" has been added to your cart.`);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+        function updateCartItem(product) {
+            fetch(`http://localhost:3000/cart_items/${product.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(product),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(`"${data.name}" quantity in your cart has been updated.`);
                 })
                 .catch(error => {
                     console.error(error);
