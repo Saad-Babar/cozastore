@@ -62,7 +62,7 @@
             const password = document.getElementById('pswd').value;
             
             $.ajax({
-                url: "http://localhost:3000/users",
+                url: "db.json/users",
                 success: function (users) {
                     const user = users.find((user) => user.name === username);
                     if (user) {

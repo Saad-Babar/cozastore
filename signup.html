@@ -56,7 +56,7 @@
             let username = document.getElementById('name').value;
             let password = document.getElementById('pass').value;
 
-            fetch("http://localhost:3000/users", {
+            fetch("db.json/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
