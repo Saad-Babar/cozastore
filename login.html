@@ -62,7 +62,7 @@
             const password = document.getElementById('pswd').value;
             
             $.ajax({
-                url: "db.json/users",
+                url: "https://saad-babar.github.io/cozastore/db.json/users",
                 success: function (users) {
                     const user = users.find((user) => user.name === username);
                     if (user) {

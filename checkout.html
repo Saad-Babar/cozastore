@@ -564,7 +564,7 @@
             cartItemCountElement.textContent = count;
         }
         function fetchCartItemsAndUpdateCount() {
-            fetch('db.json/cart_items')
+            fetch('https://saad-babar.github.io/cozastore/db.json/cart_items')
                 .then(response => response.json())
                 .then(data => {
                     itemCount = data.length;
