@@ -1,3 +1,48 @@
+// Side Bar Code 
+function openmenu() {
+    document.getElementById('mySidebar').style.marginRight = '0px';
+    document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
+}
+function closemenu() {
+    document.getElementById('mySidebar').style.marginRight = '-390px';
+    document.body.style.backgroundColor = '#fff';
+}
+function openmenus() {
+    document.getElementById('mySidebars').style.marginRight = '0';
+    document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
+}
+function closemenus() {
+    document.getElementById('mySidebars').style.marginRight = '-400px';
+    document.body.style.backgroundColor = '#fff';
+}
+// side bar end 
+
+// Ollu Carosel 
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true,
+            loop: true,
+        },
+        600: {
+            items: 1,
+            nav: false,
+            loop: true,
+        },
+        1000: {
+            items: 1,
+            nav: true,
+            loop: true,
+        }
+    }
+});
+// owl carosel end 
+
 // logout start 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('logout-button').addEventListener('click', function () {
@@ -12,7 +57,7 @@ function fetchData() {
     fetch('products_data.json')
         .then(response => response.json())
         .then(data => {
-            addProductsToPage(data);
+            addProductsToPage(data.products);
         })
 }
 window.onload = fetchData;
@@ -20,9 +65,9 @@ window.onload = fetchData;
 function addProductsToPage(data) {
     const productContainer = document.getElementById('product-container');
 
-    data.products.forEach(product => {
+    data.forEach(product => {
         const productDiv = document.createElement('div');
-        productDiv.className = `col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${product.category_of}`;
+        productDiv.className = `col-sm-6 col-md-4 col-lg-3 ${product.price} p-b-35 ${product.color} isotope-item ${product.category_of}`;
         productDiv.innerHTML = `
         <div class="block2">
         <div class="block2-pic hov-img0">
@@ -36,6 +81,7 @@ function addProductsToPage(data) {
         <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
         ${product.name}
         </a>
+        <a href="#" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">${product.color}</a>
         <span class="stext-105 cl3">
         $${product.price}
         </span>
@@ -77,197 +123,92 @@ function filterProducts(category) {
         }
     });
 }
-// product details 
+// special 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-tope-groupa button');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            const color = event.target.getAttribute('data-filter');
+            filterProducts(color);
+        });
+    });
+});
+function filterProducts(color) {
+    const products = document.querySelectorAll('.isotope-item');
+
+    products.forEach(product => {
+        const productCategory = product.classList.contains(color) ? color : 'all';
+        if (productCategory === color) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+// special 
+
+// special 2
+// Fetch the product data from the JSON file
+fetch('products_data.json')
+    .then(response => response.json())
+    .then(data => {
+        const products = data.products;
+
+        const filterButtons = document.querySelectorAll('.taba');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const buttonId = button.getAttribute('id');
+
+                let minPrice = 0;
+                let maxPrice = Number.MAX_VALUE;
+
+                if (buttonId === 'alproda') {
+                } else if (buttonId === 'blacka') {
+                    minPrice = 0;
+                    maxPrice = 20;
+                } else if (buttonId === 'whitea') {
+                    minPrice = 20;
+                    maxPrice = 50;
+                } else if (buttonId === 'pinka') {
+                    minPrice = 50;
+                    maxPrice = 60;
+                } else if (buttonId === 'greya') {
+                    minPrice = 60;
+                    maxPrice = 100;
+                }
+
+                const filteredProducts = products.filter(product => {
+                    const productPrice = parseFloat(product.price);
+                    return productPrice >= minPrice && productPrice <= maxPrice;
+                });
+
+                $(".isotope-item").each(function (index, element) {
+                    $(element).remove();
+                });
+                addProductsToPage(filteredProducts)
+
+                console.log(filteredProducts);
+
+            });
+        });
+    })
+    .catch(error => console.error('Error loading product data:', error));
+
+// special 2 end 
+
 
 // Change Color Of Active bUTTON by jquerry
 $(document).ready(function () {
-    $(".tab").click(function () {
-        $(".tab").removeClass("how-active1");
+    $(".coni").click(function () {
+        $(".coni").removeClass("how-active1");
         $(this).toggleClass("how-active1");
     });
 });
-// Ollu Carosel 
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    responsiveClass: true,
-    responsive: {
-        0: {
-            items: 1,
-            nav: true,
-            loop: true,
-        },
-        600: {
-            items: 1,
-            nav: false,
-            loop: true,
-        },
-        1000: {
-            items: 1,
-            nav: true,
-            loop: true,
-        }
-    }
+// 2 
+$(document).ready(function () {
+    $(".tabbb").click(function () {
+        $(".tabbb").removeClass("filter-link-active");
+        $(this).toggleClass("filter-link-active");
+    });
 });
-// Side Bar Code 
-function openmenu() {
-    document.getElementById('mySidebar').style.marginRight = '0px';
-    document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
-}
-function closemenu() {
-    document.getElementById('mySidebar').style.marginRight = '-390px';
-    // document.getElementById('main').style.marginRight = '0';
-    document.body.style.backgroundColor = '#fff';
-}
-function openmenus() {
-    document.getElementById('mySidebars').style.marginRight = '0';
-    // document.getElementById('sideMenu').style.marginRight = '-250px';
-    // document.getElementById('main').style.marginRight = '250px';
-    document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
-}
-function closemenus() {
-    document.getElementById('mySidebars').style.marginRight = '-400px';
-    // document.getElementById('main').style.marginRight = '0';
-    document.body.style.backgroundColor = '#fff';
-}
-// $(document).ready(function() {
-
-//     $("#alprod").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-
-//     $("#womn").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-
-//     $("#mn").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-
-//     $("#blt").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-
-//     $("#shos").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-
-//     $("#watch").click(function() {
-//         $(this).toogle("how-active1");
-//     });
-// });
-
-
-// const btns = document.querySelectorAll(".stext-106");
-// const storeProducts = document.querySelectorAll(".isotope-item");
-
-// for (i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", (e) => {
-//         e.preventDefault();
-
-//         const filter = e.target.dataset.filter;
-//         storeProducts.forEach((products) => {
-//             if (filter == "all") {
-//                 products.style.display = "block";
-//             }
-//             else {
-//                 if (products.classList.contains(filter)) {
-//                     products.style.display = "block";
-//                 } else {
-//                     products.style.display = "none";
-//                 }
-//             }
-//         })
-//     });
-
-// };
-
-
-
-// function alprodct() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.add('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.remove('how-active1');
-// };
-// function womn() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.remove('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.add('how-active1');
-// };
-// function mn() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.remove('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.add('how-active1');
-// };
-// function blt() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.remove('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.add('how-active1');
-
-// };
-// function shos() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.remove('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.add('how-active1');
-
-// };
-// function watch() {
-//     const deco = document.getElementById("alprod");
-//     deco.classList.remove('how-active1');
-//     const deco2 = document.getElementById("womn");
-//     deco2.classList.remove('how-active1');
-//     const deco3 = document.getElementById("mn");
-//     deco3.classList.remove('how-active1');
-//     const deco4 = document.getElementById("blt");
-//     deco4.classList.remove('how-active1');
-//     const deco5 = document.getElementById("shos");
-//     deco5.classList.remove('how-active1');
-//     const deco6 = document.getElementById("watch");
-//     deco6.classList.add('how-active1');
-// };

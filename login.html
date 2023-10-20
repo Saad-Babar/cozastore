@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/22b137e1dc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -49,20 +49,20 @@
             </div>
         </div>
     </section>
-    
+
     <!-- <button class="getUsers btn btn-primary">Check users</button> -->
     <script>
-        
+
         const form = document.getElementById("login_form");
-        
+
         form.addEventListener("submit", function (event) {
             event.preventDefault();
-            
+
             const username = document.getElementById('usname').value;
             const password = document.getElementById('pswd').value;
-            
+
             $.ajax({
-                url: "https://saad-babar.github.io/cozastore/db.json/users",
+                url: "http://localhost:3000/users",
                 success: function (users) {
                     const user = users.find((user) => user.name === username);
                     if (user) {
@@ -71,11 +71,11 @@
                             window.location.href = 'cart.html';
                             // console.log('you are logged in');
                             // alert('you are logged in');
-                            
+
                         } else {
                             alert('Invalid username or password. Please try again.');
                         }
-                        
+
                     } else {
                         console.log('user not found');
                     }
@@ -84,64 +84,66 @@
                     console.log('route not found', err)
                 }
             });
-            
+
         })
-        
-        
-        // document.addEventListener('DOMContentLoaded', function () {
-            //     // Check if the user is already logged in
-            //     const userToken = localStorage.getItem('userToken');
-            //     if (userToken) {
-                //         window.location.href = 'index.html';
-                //     }
-                
-                //     // Add a click event listener to the login button
-                //     document.getElementById('login-button').addEventListener('click', function () {
-                    //         const username = document.getElementById('usname').value;
-                    //         const password = document.getElementById('pswd').value;
-                    
-                    
-                    //
-                    
-                    //         // Replace this with your actual authentication logic (e.g., check against hard-coded values)
-                    //         // if (username === 'saad' && password === 'saad') {
-                        //         //     localStorage.setItem('userToken', 'your-secret-token'); // Store a token indicating authentication
-                        //         //     window.location.href = 'index.html';
-                        //         // } else {
-                            //         //     alert('Invalid username or password. Please try again.');
-                            //         // }
-                            //     });
-                            // });
-                            
-                            // $('.getUsers').click(function (e) {
-                                
-                                //     $.post('http://localhost:3000/users', JSON.stringify({id:1, name: "sheraz", password: '112233' }), function (responseData) {
-                                    //         console.log('POST request successful:', responseData);
-                                    //     }).fail(function (xhr, textStatus, errorThrown) {
-                                        //         console.error('Error:', errorThrown);
-                                        //     });
-                                        
-                                        //     // $.ajax({
-                                            //     //     url: "http://localhost:3000/users",
-                                            //     //     success: function (users) {
-                                                //     //         // console.table(users);
-                                                //     //         for (const user of users) {
-                                                    //     //             if (user.name === 'saad3') {
-                                                        //     //                 console.log(user);
-                                                        //     //             }
-                                                        //     //         }
-                                                        //     //     },
-                                                        //     //     error: function (err) {
-                                                            //     //         console.log('route not found', err)
-                                                            //     //     }
-                                                            
-                                                            //     // });
-                                                            // });
-                                                        </script>
-                                                        
-                                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                                                        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                                                        crossorigin="anonymous"></script>
-                                                    </body>
-                                                    
-                                                    </html>
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- 
+// document.addEventListener('DOMContentLoaded', function () {
+// // Check if the user is already logged in
+// const userToken = localStorage.getItem('userToken');
+// if (userToken) {
+// window.location.href = 'index.html';
+// }
+
+// // Add a click event listener to the login button
+// document.getElementById('login-button').addEventListener('click', function () {
+// const username = document.getElementById('usname').value;
+// const password = document.getElementById('pswd').value;
+
+
+//
+
+// // Replace this with your actual authentication logic (e.g., check against hard-coded values)
+// // if (username === 'saad' && password === 'saad') {
+// // localStorage.setItem('userToken', 'your-secret-token'); // Store a token indicating authentication
+// // window.location.href = 'index.html';
+// // } else {
+// // alert('Invalid username or password. Please try again.');
+// // }
+// });
+// });
+
+// $('.getUsers').click(function (e) {
+
+// $.post('http://localhost:3000/users', JSON.stringify({id:1, name: "sheraz", password: '112233' }), function
+(responseData) {
+// console.log('POST request successful:', responseData);
+// }).fail(function (xhr, textStatus, errorThrown) {
+// console.error('Error:', errorThrown);
+// });
+
+// // $.ajax({
+// // url: "http://localhost:3000/users",
+// // success: function (users) {
+// // // console.table(users);
+// // for (const user of users) {
+// // if (user.name === 'saad3') {
+// // console.log(user);
+// // }
+// // }
+// // },
+// // error: function (err) {
+// // console.log('route not found', err)
+// // }
+
+// // });
+// }); -->

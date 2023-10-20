@@ -5,6 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/22b137e1dc.js" crossorigin="anonymous"></script>
@@ -67,7 +79,6 @@
                             <span id="cart-item-count" style="
                             position: absolute;
                             top: 1px;
-                            /* right: -10px; */
                             background-color: #F74877;
                             color: white;
                             border-radius: 50%;
@@ -377,32 +388,112 @@
             </div>
             <div class="flex-w flex-sb-m p-b-52">
                 <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 tab" data-filter="all"
-                        onclick="alprodct()" id="alprod">
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 tab coni"
+                        data-filter="all" onclick="alprodct()" id="alprod">
                         All Products
                     </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab" data-filter="women"
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="women"
                         onclick="womn()" id="womn">
                         Women
                     </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab" data-filter="men" onclick="mn()"
-                        id="mn">
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="men"
+                        onclick="mn()" id="mn">
                         Men
                     </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab" data-filter="belt"
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="belt"
                         onclick="blt()" id="blt">
                         Belt
                     </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab" data-filter="shoes"
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="shoes"
                         onclick="shos()" id="shos">
                         Shoes
                     </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab" data-filter="watches"
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="watches"
                         onclick="watch()" id="watch">
                         Watches
                     </button>
                 </div>
             </div>
+            <div class="flex-w flex-sb-m p-b-52">
+                <div class="flex-w flex-l-m filter-tope-groupa m-tb-10">
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 tab coni"
+                        data-filter="all" id="alprod">
+                        All Colors
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="black"
+                        id="black">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #222; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        Black
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="white"
+                        id="white">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #ddd8d8; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        White
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="pink"
+                        id="pink">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #fd9393; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        Pink
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="grey"
+                        id="grey">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #3d3b3b; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        Grey
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="brown"
+                        id="brown">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #332107; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        Brown
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 tab coni" data-filter="blue"
+                        id="blue">
+                        <span class="fs-15 lh-12 m-r-6" style="color: #0099ff; pointer-events: none;">
+                            <i class="zmdi zmdi-circle"></i>
+                        </span>
+                        Blue
+                    </button>
+                </div>
+            </div>
+
+            <!-- price filter  -->
+            <div class="flex-w flex-sb-m p-b-52">
+                <div class="flex-w flex-l-m filter-tope-groupb m-tb-10">
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 taba coni"
+                        data-filter="all" id="alproda">
+                        All Prices
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="blacka">
+                        $0 - $20
+                        <span>(<i class="fa-solid fa-dollar-sign"></i>)</span>
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="whitea">
+                        $20 - $50
+                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="pinka">
+                        $50 - $60
+                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
+                                class="fa-solid fa-dollar-sign"></i>)</span>
+                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="greya">
+                        $60 - $100
+                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
+                                class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
+                    </button>
+                </div>
+            </div>
+            <!-- price filter end  -->
+
             <!-- products card start -->
             <div class="row isotope-grid">
                 <div id="product-container" class="row"></div>
@@ -691,7 +782,7 @@
             cartItemCountElement.textContent = count;
         }
         function fetchCartItemsAndUpdateCount() {
-            fetch('https://saad-babar.github.io/cozastore/db.json/cart_items')
+            fetch('http://localhost:3000/cart_items')
                 .then(response => response.json())
                 .then(data => {
                     itemCount = data.length;
@@ -728,6 +819,37 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function () {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function () {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function () {
+                ps.update();
+            })
+        });
+    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

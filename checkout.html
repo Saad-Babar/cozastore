@@ -564,7 +564,7 @@
             cartItemCountElement.textContent = count;
         }
         function fetchCartItemsAndUpdateCount() {
-            fetch('https://saad-babar.github.io/cozastore/db.json/cart_items')
+            fetch('http://localhost:3000/cart_items')
                 .then(response => response.json())
                 .then(data => {
                     itemCount = data.length;
@@ -578,13 +578,13 @@
         // badge end 
     </script>
     <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const userToken = localStorage.getItem('userToken');
-            if (!userToken) {
-                window.location.href = 'login.html';
-            }
-        });
-    </script> -->
+    document.addEventListener('DOMContentLoaded', function () {
+        const userToken = localStorage.getItem('userToken');
+        if (!userToken) {
+            window.location.href = 'login.html';
+        }
+    });
+</script> -->
     <script>
         productContainer.appendChild(productDiv);
         productDiv.addEventListener('click', function () {

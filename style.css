@@ -156,7 +156,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ BUTTON BACK TO TOP ]*/
+[ BUTTON BACK TO TOP ]*/
 .btn-back-to-top {
   display: none;
   position: fixed;
@@ -196,10 +196,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Header ]*/
+[ Header ]*/
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-      [ Header Desktop ]*/
+[ Header Desktop ]*/
 
 .container-menu-desktop {
   height: auto;
@@ -225,7 +225,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*==================================================================
-      [ Top bar ]*/
+[ Top bar ]*/
 .top-bar {
   height: 40px;
   background-color: #222;
@@ -270,7 +270,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*==================================================================
-      [ Menu ]*/
+[ Menu ]*/
 
 .wrap-menu-desktop {
   position: fixed;
@@ -318,7 +318,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*------------------------------------------------------------------
-      [ Logo ]*/
+[ Logo ]*/
 .logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -338,7 +338,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*------------------------------------------------------------------
-      [ Menu ]*/
+[ Menu ]*/
 
 .menu-desktop {
   display: -webkit-box;
@@ -466,7 +466,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*------------------------------------------------------------------
-      [ Icon header ]*/
+[ Icon header ]*/
 
 .wrap-icon-header {
   flex-grow: 1;
@@ -506,7 +506,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*------------------------------------------------------------------
-      [ Modal search ]*/
+[ Modal search ]*/
 .modal-search-header {
   position: fixed;
   z-index: 2000;
@@ -604,7 +604,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*==================================================================
-      [ Fixed menu desktop ]*/
+[ Fixed menu desktop ]*/
 
 .fix-menu-desktop .wrap-menu-desktop {
   height: 70px;
@@ -637,7 +637,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-      [ Header Mobile ]*/
+[ Header Mobile ]*/
 .wrap-header-mobile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -658,7 +658,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*------------------------------------------------------------------
-      [ Logo mobile ]*/
+[ Logo mobile ]*/
 .logo-mobile {
   display: block;
   position: relative;
@@ -682,7 +682,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*------------------------------------------------------------------
-      [ btn show menu ]*/
+[ btn show menu ]*/
 .hamburger {
   display: -webkit-box;
   display: -webkit-flex;
@@ -718,7 +718,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*==================================================================
-      [ Menu mobile ]*/
+[ Menu mobile ]*/
 .menu-mobile {
   width: 100%;
   background-color: white;
@@ -806,7 +806,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Sidebar ]*/
+[ Sidebar ]*/
 .wrap-sidebar {
   position: fixed;
   z-index: 1100;
@@ -903,7 +903,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Header cart ]*/
+[ Header cart ]*/
 .wrap-header-cart {
   position: fixed;
   z-index: 1100;
@@ -1059,22 +1059,22 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Restyle Select2 ]*/
+[ Restyle Select2 ]*/
 
 /*------------------------------------------------------------------
-      [ in select ]*/
+[ in select ]*/
 
 
 /*------------------------------------------------------------------
-      [ Dropdown option ]*/
+[ Dropdown option ]*/
 
 /*------------------------------------------------------------------
-      [ rs2 ]*/
+[ rs2 ]*/
 
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Slick1 ]*/
+[ Slick1 ]*/
 .wrap-slick1 {
   position: relative;
 }
@@ -1239,7 +1239,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Slick2 ]*/
+[ Slick2 ]*/
 
 .wrap-slick2 {
   position: relative;
@@ -1290,7 +1290,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Slick3 ]*/
+[ Slick3 ]*/
 .wrap-slick3 {
   position: relative;
 }
@@ -1373,7 +1373,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ RS Magnific-Popup ]*/
+[ RS Magnific-Popup ]*/
 
 /* overlay at start */
 /* overlay animate in */
@@ -1385,7 +1385,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Tab01 ]*/
+[ Tab01 ]*/
 .tab01 .nav-tabs {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1432,11 +1432,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ RS sweet alert ]*/
+[ RS sweet alert ]*/
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Filter ]*/
+[ Filter ]*/
 .show-search .icon-search,
 .show-filter .icon-filter {
   display: none;
@@ -1544,7 +1544,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Num Product ]*/
+[ Num Product ]*/
 .wrap-num-product {
   width: 140px;
   height: 45px;
@@ -1581,7 +1581,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ Tolltip100 ]*/
+[ Tolltip100 ]*/
 .tooltip100 {
   position: relative;
 }
@@ -1630,7 +1630,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Modal1 ]*/
+[ Modal1 ]*/
 .wrap-modal1 {
   position: fixed;
   width: 100%;
@@ -1666,7 +1666,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ Table Shopping Cart ]*/
+[ Table Shopping Cart ]*/
 
 .wrap-table-shopping-cart {
   overflow: auto;
@@ -1743,7 +1743,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Block1 ]*/
+[ Block1 ]*/
 .block1 {
   position: relative;
   border: 1px solid #e6e6e6;
@@ -1808,7 +1808,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ Block2 ]*/
+[ Block2 ]*/
 .block2-pic {
   position: relative;
 }
@@ -1889,8 +1889,8 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
-      ==================================================================*/
+TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
+==================================================================*/
 .cl0 {
   color: #fff;
 }
@@ -1940,7 +1940,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ S-Text 0 - 15 ]*/
+[ S-Text 0 - 15 ]*/
 .stext-101 {
   font-family: Poppins-Medium;
   font-size: 15px;
@@ -2057,7 +2057,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ M-Text 16 - 25 ]*/
+[ M-Text 16 - 25 ]*/
 .mtext-101 {
   font-family: Poppins-Medium;
   font-size: 18px;
@@ -2141,7 +2141,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ L-Text >= 26 ]*/
+[ L-Text >= 26 ]*/
 .ltext-101 {
   font-family: Poppins-Regular;
   font-size: 28px;
@@ -2217,12 +2217,12 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE 
-      ==================================================================*/
+SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE SIZE 
+==================================================================*/
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Size ]*/
+[ Size ]*/
 .size-101 {
   min-width: 161px;
   height: 46px;
@@ -2344,7 +2344,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ Width ]*/
+[ Width ]*/
 .size-201 {
   max-width: 270px;
 }
@@ -2420,7 +2420,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Height ]*/
+[ Height ]*/
 .size-301 {
   min-height: 30px;
 }
@@ -2435,8 +2435,8 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND 
-      ==================================================================*/
+BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND 
+==================================================================*/
 .bg-none {
   background-color: transparent;
 }
@@ -2498,8 +2498,8 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      BORDER BORDER  BORDER  BORDER  BORDER  BORDER  BORDER  BORDER
-      ==================================================================*/
+BORDER BORDER  BORDER  BORDER  BORDER  BORDER  BORDER  BORDER
+==================================================================*/
 .bor0 {
   border-radius: 50%;
 }
@@ -2597,8 +2597,8 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW 
-      ==================================================================*/
+HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW 
+==================================================================*/
 .plh0::-webkit-input-placeholder {
   color: #999999;
 }
@@ -2915,17 +2915,17 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO
-      ==================================================================*/
+PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO PSEUDO
+==================================================================*/
 
 /*//////////////////////////////////////////////////////////////////
-      [ Focus ]*/
+[ Focus ]*/
 
 
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Hover ]*/
+[ Hover ]*/
 .hov-cl1:hover {
   color: #717fe0;
 }
@@ -3035,11 +3035,11 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*==================================================================
-      RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE
-      ==================================================================*/
+RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE
+==================================================================*/
 
 /*//////////////////////////////////////////////////////////////////
-      [ XL ]*/
+[ XL ]*/
 @media (max-width: 1199px) {
   .m-lr-0-xl {
     margin-left: 0;
@@ -3052,7 +3052,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ LG ]*/
+[ LG ]*/
 @media (max-width: 991px) {
   .p-lr-0-lg {
     padding-left: 0;
@@ -3090,7 +3090,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ MD ]*/
+[ MD ]*/
 @media (max-width: 767px) {
   .p-lr-15-md {
     padding-left: 15px;
@@ -3118,7 +3118,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ SM ]*/
+[ SM ]*/
 @media (max-width: 575px) {
   .m-lr-15-sm {
     margin-left: 15px;
@@ -3163,7 +3163,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ SSM ]*/
+[ SSM ]*/
 @media (max-width: 480px) {
 
   .w-full-ssm {
@@ -3198,7 +3198,7 @@ input.num-product::-webkit-inner-spin-button {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ REBOOT ]*/
+[ REBOOT ]*/
 *,
 *:before,
 *:after {
@@ -3270,7 +3270,7 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ FONT SIZE ]*/
+[ FONT SIZE ]*/
 .fs-14 {
   font-size: 14px;
 }
@@ -3292,7 +3292,7 @@ button:focus {
 }
 
 /*//////////////////////////////////////////////////////////////////
-      [ PADDING ]*/
+[ PADDING ]*/
 .p-t-1 {
   padding-top: 1px;
 }
@@ -3850,7 +3850,7 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ MARGIN ]*/
+[ MARGIN ]*/
 .m-all-1 {
   margin-top: 1px;
 }
@@ -4053,10 +4053,10 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ TEXT ]*/
+[ TEXT ]*/
 
 /*------------------------------------------------------------------
-      [ Line height ]*/
+[ Line height ]*/
 .lh-10 {
   line-height: 1.0;
 }
@@ -4073,7 +4073,7 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ SIZE ]*/
+[ SIZE ]*/
 
 .s-full {
   width: 100%;
@@ -4091,18 +4091,18 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ BACKGROUND ]*/
+[ BACKGROUND ]*/
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ EFFECT ]*/
+[ EFFECT ]*/
 
 /*------------------------------------------------------------------
-      [ Opacity ]*/
+[ Opacity ]*/
 
 
 /*------------------------------------------------------------------
-      [ Wrap Picture ]*/
+[ Wrap Picture ]*/
 
 .wrap-pic-s,
 .wrap-pic-w {
@@ -4138,7 +4138,7 @@ button:focus {
 
 
 /*------------------------------------------------------------------
-      [ Transition ]*/
+[ Transition ]*/
 .trans-03 {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -4170,10 +4170,10 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ POSITION ]*/
+[ POSITION ]*/
 
 /*------------------------------------------------------------------
-      [ Display ]*/
+[ Display ]*/
 .dis-none {
   display: none;
 }
@@ -4206,21 +4206,21 @@ button:focus {
 }
 
 /*------------------------------------------------------------------
-      [ Position ]*/
+[ Position ]*/
 .pos-relative {
   position: relative;
 }
 
 /*------------------------------------------------------------------
-      [ Float ]*/
+[ Float ]*/
 
 
 /*------------------------------------------------------------------
-      [ Top Bottom Left Right ]*/
+[ Top Bottom Left Right ]*/
 
 
 /*------------------------------------------------------------------
-      [ Flex ]*/
+[ Flex ]*/
 .flex-w {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
@@ -4329,7 +4329,7 @@ button:focus {
 
 
 /*------------------------------------------------------------------
-      [ Absolute ]*/
+[ Absolute ]*/
 
 .ab-t-l {
   position: absolute;
@@ -4346,7 +4346,7 @@ button:focus {
 
 
 /*//////////////////////////////////////////////////////////////////
-      [ Other ]*/
+[ Other ]*/
 
 .parallax100 {
   background-attachment: fixed;
@@ -4373,9 +4373,9 @@ button:focus {
 
 
 /* .navbar-list {
-        height: 50%;
-        object-fit: contain;
-      } */
+  height: 50%;
+  object-fit: contain;
+} */
 
 .fa-bars {
   color: white;
