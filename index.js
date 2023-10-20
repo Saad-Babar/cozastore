@@ -149,50 +149,119 @@ function filterProducts(color) {
 // special 
 
 // special 2
+// fetch('products_data.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         const products = data.products;
+
+//         const filterButtons = document.querySelectorAll('.taba');
+//         filterButtons.forEach(button => {
+//             button.addEventListener('click', function () {
+//                 const buttonId = button.getAttribute('id');
+
+//                 let minPrice = 0;
+//                 let maxPrice = 100;
+
+//                 if (buttonId === 'alproda') {
+//                 } else if (buttonId === 'blacka') {
+//                     minPrice = 0;
+//                     maxPrice = 20;
+//                 } else if (buttonId === 'whitea') {
+//                     minPrice = 20;
+//                     maxPrice = 50;
+//                 } else if (buttonId === 'pinka') {
+//                     minPrice = 50;
+//                     maxPrice = 60;
+//                 } else if (buttonId === 'greya') {
+//                     minPrice = 60;
+//                     maxPrice = 100;
+//                 }
+
+//                 const filteredProducts = products.filter(product => {
+//                     const productPrice = parseFloat(product.price);
+//                     return productPrice >= minPrice && productPrice <= maxPrice;
+//                 });
+
+//                 $(".isotope-item").each(function (index, element) {
+//                     $(element).remove();
+//                 });
+//                 addProductsToPage(filteredProducts)
+
+//                 // console.log(filteredProducts);
+
+//             });
+//         });
+//     })
+//     .catch(error => console.error('Error loading product data:', error));
+
+
+
+
 fetch('products_data.json')
     .then(response => response.json())
     .then(data => {
         const products = data.products;
 
-        const filterButtons = document.querySelectorAll('.taba');
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const buttonId = button.getAttribute('id');
-
-                let minPrice = 0;
-                let maxPrice = 100;
-
-                if (buttonId === 'alproda') {
-                } else if (buttonId === 'blacka') {
-                    minPrice = 0;
-                    maxPrice = 20;
-                } else if (buttonId === 'whitea') {
-                    minPrice = 20;
-                    maxPrice = 50;
-                } else if (buttonId === 'pinka') {
-                    minPrice = 50;
-                    maxPrice = 60;
-                } else if (buttonId === 'greya') {
-                    minPrice = 60;
-                    maxPrice = 100;
-                }
-
-                const filteredProducts = products.filter(product => {
-                    const productPrice = parseFloat(product.price);
-                    return productPrice >= minPrice && productPrice <= maxPrice;
-                });
-
-                $(".isotope-item").each(function (index, element) {
-                    $(element).remove();
-                });
-                addProductsToPage(filteredProducts)
-
-                // console.log(filteredProducts);
-
+        function filterProducts(minValue, maxValue) {
+            return products.filter(product => {
+                const productPrice = parseFloat(product.price);
+                return productPrice >= minValue && productPrice <= maxValue;
             });
+        }
+
+        const initialMinValue = parseFloat(minRange.value);
+        const initialMaxValue = parseFloat(maxRange.value);
+        const filteredProducts = filterProducts(initialMinValue, initialMaxValue);
+
+        // console.log(filteredProducts);
+        $(".isotope-item").each(function (index, element) {
+            $(element).remove();
+        });
+        addProductsToPage(filteredProducts);
+
+        minRange.addEventListener("input", function () {
+            const minValue = parseFloat(minRange.value);
+            const maxValue = parseFloat(maxRange.value);
+            const filteredProducts = filterProducts(minValue, maxValue);
+            // console.log(filteredProducts);
+            $(".isotope-item").each(function (index, element) {
+                $(element).remove();
+            });
+            addProductsToPage(filteredProducts);
+        });
+
+        maxRange.addEventListener("input", function () {
+            const minValue = parseFloat(minRange.value);
+            const maxValue = parseFloat(maxRange.value);
+            const filteredProducts = filterProducts(minValue, maxValue);
+            // console.log(filteredProducts);
+            $(".isotope-item").each(function (index, element) {
+                $(element).remove();
+            });
+            addProductsToPage(filteredProducts);
         });
     })
-    .catch(error => console.error('Error loading product data:', error));
+    .catch(error => {
+        console.error("Error loading JSON data:", error);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // special 2 end 
 
@@ -210,4 +279,24 @@ $(document).ready(function () {
         $(".tabbb").removeClass("filter-link-active");
         $(this).toggleClass("filter-link-active");
     });
+});
+
+// fhdsbfvsj s 
+
+const minRange = document.getElementById("minRange");
+const maxRange = document.getElementById("maxRange");
+const minValue = document.getElementById("minValue");
+const maxValue = document.getElementById("maxValue");
+
+// Update the initial slider values display
+minValue.textContent = minRange.value;
+maxValue.textContent = maxRange.value;
+
+// Add an event listener to update the values as the sliders are moved
+minRange.addEventListener("input", function () {
+    minValue.textContent = minRange.value;
+});
+
+maxRange.addEventListener("input", function () {
+    maxValue.textContent = maxRange.value;
 });

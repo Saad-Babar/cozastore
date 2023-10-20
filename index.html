@@ -469,28 +469,39 @@
             <!-- price filter  -->
             <div class="flex-w flex-sb-m p-b-52">
                 <div class="flex-w flex-l-m filter-tope-groupb m-tb-10">
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 taba coni"
-                        data-filter="all" id="alproda">
-                        All Prices
-                    </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="blacka">
-                        $0 - $20
-                        <span>(<i class="fa-solid fa-dollar-sign"></i>)</span>
-                    </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="whitea">
-                        $20 - $50
-                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
-                    </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="pinka">
-                        $50 - $60
-                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
-                                class="fa-solid fa-dollar-sign"></i>)</span>
-                    </button>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="greya">
-                        $60 - $100
-                        <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
-                                class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
-                    </button>
+                    <div class="range-slider" style="display: flex; flex-direction: column; align-items: center;">
+                        <p style="text-align: center; font-size: 20px; margin-top: 20px;">Min Value: <span id="minValue"></span>
+                        </p>
+                        <input type="range" min="0" max="100" value="0" class="slider" id="minRange" style="width: 100%;">
+                        <p style="text-align: center; font-size: 20px; margin-top: 20px;">Max Value: <span id="maxValue"></span>
+                        </p>
+                        <input type="range" min="0" max="100" value="100" class="slider" id="maxRange" style="width: 100%;">
+                    </div>
+
+
+
+                    <!-- <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 taba coni"
+            data-filter="all" id="alproda">
+            All Prices
+        </button>
+        <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="blacka">
+            $0 - $20
+            <span>(<i class="fa-solid fa-dollar-sign"></i>)</span>
+        </button>
+        <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="whitea">
+            $20 - $50
+            <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
+        </button>
+        <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="pinka">
+            $50 - $60
+            <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
+                class="fa-solid fa-dollar-sign"></i>)</span>
+            </button>
+            <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 taba coni" id="greya">
+                $60 - $100
+                <span>(<i class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i> <i
+                    class="fa-solid fa-dollar-sign"></i> <i class="fa-solid fa-dollar-sign"></i>)</span>
+                </button> -->
                 </div>
             </div>
             <!-- price filter end  -->
@@ -797,13 +808,13 @@
         // badge end 
     </script>
     <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const userToken = localStorage.getItem('userToken');
-            if (!userToken) {
-                window.location.href = 'login.html';
-            }
-        });
-    </script> -->
+    document.addEventListener('DOMContentLoaded', function () {
+        const userToken = localStorage.getItem('userToken');
+        if (!userToken) {
+            window.location.href = 'login.html';
+        }
+    });
+</script> -->
     <script>
         productContainer.appendChild(productDiv);
         productDiv.addEventListener('click', function () {
