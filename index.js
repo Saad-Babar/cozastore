@@ -149,7 +149,6 @@ function filterProducts(color) {
 // special 
 
 // special 2
-// Fetch the product data from the JSON file
 fetch('products_data.json')
     .then(response => response.json())
     .then(data => {
@@ -161,7 +160,7 @@ fetch('products_data.json')
                 const buttonId = button.getAttribute('id');
 
                 let minPrice = 0;
-                let maxPrice = Number.MAX_VALUE;
+                let maxPrice = 100;
 
                 if (buttonId === 'alproda') {
                 } else if (buttonId === 'blacka') {
@@ -188,7 +187,7 @@ fetch('products_data.json')
                 });
                 addProductsToPage(filteredProducts)
 
-                console.log(filteredProducts);
+                // console.log(filteredProducts);
 
             });
         });
